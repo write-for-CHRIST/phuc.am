@@ -1,0 +1,10 @@
+{
+  "name": "phuc.am.server",
+  "version": "1.0.0",
+  "description": "Backend for https://phuc.am",
+  "main": "index.js",
+  "repository": "https://github.com/write-for-CHRIST/phuc.am.git",
+  "author": "Write For Christ Team",
+  "license": "MIT",
+  "private": false
+}
