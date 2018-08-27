@@ -6,5 +6,13 @@
   "repository": "https://github.com/write-for-CHRIST/phuc.am.git",
   "author": "Write For Christ Team",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "start": "node src/index.js",
+    "server": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "firebase-admin": "^6.0.0"
+  }
 }
