@@ -1,7 +1,9 @@
 const express = require("express");
 const { getGospel } = require("./index");
-
+const cors = require('cors')
 const app = express();
+
+app.use(cors())
 
 app.get("/", function(req, res) {
   res.send("Hello World");
@@ -15,6 +17,6 @@ app.get("/gospel", (req, res) => {
     .catch(err => console.error(err));
 });
 
-app.listen(3000, () => {
-    console.log("Server is up on port 3000")
+app.listen(4000, () => {
+    console.log("Server is up on port 4000")
 })
