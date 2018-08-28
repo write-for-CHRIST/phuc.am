@@ -1,0 +1,23 @@
+.gospel-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gospel-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.gospel-text {
+  flex: 1;
+}
+
+.gospel-shape {
+  display: block;
+  width: 128px;
+  height: 128px;
+  background-color: yellow;
+  border-radius: 50%;
+}
