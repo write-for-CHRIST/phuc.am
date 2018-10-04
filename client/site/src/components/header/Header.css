@@ -1,0 +1,43 @@
+h1{
+    color: white;
+    margin: 0;
+}
+p{
+    color: black;
+}
+ul{
+  padding-left: 0;
+  }
+ul.menu li{
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #fff;
+  }
+header{
+    background-color: coral; 
+    padding: 10px 0;
+}
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
