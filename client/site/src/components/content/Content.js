@@ -5,15 +5,20 @@ class Content extends Component {
         const title = this.props.title
         const content = this.props.content
         const color=this.props.color
+        const address=this.props.address
+        const alight=this.props.alight
+        const border=this.props.border
+        
 
         return (
-            <section className={['container', color ? color : ''].join(' ')}>
-               <div className={color}>
+            <section className={['container', color ? color : '', alight ? alight:'', border ? border: ''].join(' ')}>
+              
                    <p>
                        {content}
                    </p>
+                   <p>{address}</p>
                    <h1>{title}</h1>
-               </div>
+              
             </section>
         );
     }
