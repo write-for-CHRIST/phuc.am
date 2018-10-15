@@ -8,12 +8,15 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node src/index.js",
+    "start": "nodemon --watch src src/server.js",
     "server": "node src/server.js"
   },
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "firebase-admin": "^6.0.0"
+    "mongodb": "^3.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
