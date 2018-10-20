@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 var bodyParser = require("body-parser");
+var ObjectID = require('mongodb').ObjectID;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -51,6 +52,20 @@ const main = () => {
         const content = req.body.content;
         gospelCollection.insertOne(
           { color: color, content: content },
+          (err, result) => {
+            if (err) throw err;
+            res.send("Success");
+          }
+        );
+      });
+
+      //HTTP PATCH: Update a attribute of document
+      app.patch("/gospel/:id", (req, res) => {
+        const id = req.params.id;
+        const color = req.body.color;
+        gospelCollection.updateOne(
+          { _id: ObjectID(id) },
+          { $set: { color: color } },
           (err, result) => {
             if (err) throw err;
             res.send("Success");
