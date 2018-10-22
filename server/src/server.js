@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 var bodyParser = require("body-parser");
-
+var ObjectId = require('mongodb').ObjectId;
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
@@ -45,6 +45,18 @@ const main = () => {
         });
       });
 
+      app.delete('/gospel/:id',(req,res ) => {
+        const id = req.params.id;
+        gospelCollection.deleteOne (
+          {_id:ObjectId(id)},
+          (err,result) => {
+            if (err) throw err;
+            res.send("success"+ id);
+          }
+      );
+      });
+
+      app.update('/gospel/')      
       // HTTP POST: Insert a document.
       app.post("/gospel", (req, res) => {
         const color = req.body.color;
